@@ -1,0 +1,251 @@
+:root {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --accent: #7c5cff;
+  --secondary: #94a3b8;
+}
+
+.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --accent: #6366f1;
+  --secondary: #475569;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.menu-btn {
+  display: none;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #5b45e3;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-text {
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.hero-img img {
+  border-radius: 50%;
+  max-width: 300px;
+  margin-top: 2rem;
+}
+
+/* Typing fade effect */
+.typing.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.typing.fade.visible {
+  opacity: 1;
+}
+
+/* Social icons */
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.2s;
+}
+
+.social:hover {
+  transform: scale(1.2);
+}
+
+.github {
+  background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg');
+  filter: invert(1);
+}
+.linkedin {
+  background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg');
+}
+.twitter {
+  background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg');
+}
+.light .github {
+  filter: invert(0);
+}
+
+/* Skills */
+.skills {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.skill-bars {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.bar {
+  margin-bottom: 1rem;
+}
+.progress {
+  background: var(--secondary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress-fill {
+  background: var(--accent);
+  height: 10px;
+  width: 0%;
+  border-radius: 8px;
+  transition: width 1.5s ease;
+}
+
+/* Projects */
+.projects {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+.project-info {
+  padding: 1rem;
+}
+.card-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 0.75rem;
+}
+input, textarea {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--secondary);
+  background: transparent;
+  color: var(--text);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg);
+  border-top: 1px solid var(--secondary);
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: var(--bg);
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHADRACK ECHESA | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">TS</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <a href="./pdf/Shadrack_Echesa_Web_Developer_CV.pdf" download class="btn secondary">Download CV</a>
+      <button id="themeToggle" class="btn">🌙</button>
+      <button id="menuToggle" class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="about">
+    <div class="hero-text reveal">
+      <h1>Hi, I'm <span class="accent">SHADRACK ECHESA</span></h1>
+      <h3>I’m a <span id="typing-text" class="typing fade"></span></h3>
+      <p>Passionate about website development, user-centered websites and web apps that merge creativity and performance.</p>
+      <a href="#projects" class="btn accent-btn">View My Work</a>
+
+      <div class="socials">
+        <a href="https://github.com/" target="_blank" class="social github" aria-label="GitHub"></a>
+        <a href="https://linkedin.com/" target="_blank" class="social linkedin" aria-label="LinkedIn"></a>
+        <a href="https://x.com/" target="_blank" class="social twitter" aria-label="Twitter"></a>
+      </div>
+    </div>
+
+    <div class="hero-img reveal">
+      <img src="./assets/Polish_20251017_203109027.jpg" alt="Profile Photo" />
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills reveal">
+    <h2>My Skills</h2>
+    <div class="skill-bars">
+      <div class="bar">
+        <span>HTML</span>
+        <div class="progress"><div class="progress-fill" data-percent="95%"></div></div>
+      </div>
+      <div class="bar">
+        <span>CSS</span>
+        <div class="progress"><div class="progress-fill" data-percent="90%"></div></div>
+      </div>
+      <div class="bar">
+        <span>JavaScript</span>
+        <div class="progress"><div class="progress-fill" data-percent="85%"></div></div>
+      </div>
+      <div class="bar">
+        <span>React</span>
+        <div class="progress"><div class="progress-fill" data-percent="80%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <h2 class="reveal">Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card reveal">
+        <img src="./assets/Polish_20251017_213139857.jpg" alt="Portfolio project">
+        <div class="project-info">
+          <h3>Personal Portfolio</h3>
+          <p>A responsive portfolio website built with HTML, CSS & JavaScript.</p>
+          <div class="card-buttons">
+            <a href="#" class="btn">Live</a>
+            <a href="#" class="btn secondary">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <img src="./assets/Polish_20251017_210918684.jpg" alt="Clock Webview">
+        <div class="project-info">
+          <h3>Clock Webview</h3>
+          <p>Real-time Clock site with updated Time and Date.</p>
+          <div class="card-buttons">
+            <a href="#" class="btn">Live</a>
+            <a href="#" class="btn secondary">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <img src="./assets/Polish_20251017_215615851.jpg" alt="Events Website">
+        <div class="project-info">
+          <h3>Events Website</h3>
+          <p>Event Managers here is  where you belong.Everything sorted profesionally</p>
+          <div class="card-buttons">
+            <a href="#" class="btn">Live</a>
+            <a href="#" class="btn secondary">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2 class="reveal">Contact Me</h2>
+    <p class="reveal">Let’s work together! Fill out the form or reach me directly.</p>
+    <form id="contactForm" class="reveal">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn accent-btn">Send Message</button>
+      <p id="formMsg"></p>
+      <a href="./public/contact.html">Direct Contact</a>
+    </form>
+  </section>
+
+  <footer class="reveal">
+    <p>© <span id="year"></span> Shadrack Echesa | Built with ❤️ using HTML, CSS, and JS</p>
+  </footer>
+</body>
+</html>
